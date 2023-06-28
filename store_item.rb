@@ -11,6 +11,9 @@
 # p coats
 
 class Shirts
+  attr_reader :color, :size, :price
+  attr_writer :color, :size, :price
+
   def initialize(input_color, input_size, input_price)
     @color = input_color
     @size = input_size
@@ -18,38 +21,37 @@ class Shirts
   end
 
   #reader method
-  def input_color
-    @color
-  end
+  # def input_color
+  #   @color
+  # end
 
-  #reader method
-  def input_size
-    @size
-  end
+  # #reader method
+  # def input_size
+  #   @size
+  # end
 
-  #reader method
-  def input_price
-    @price
-  end
+  # #reader method
+  # def input_price
+  #   @price
+  # end
 
-  #writer method
-  def price=(input_price)
-    @price = input_price
-  end
+  # #writer method
+  # def price=(input_price)
+  #   @price = input_price
+  # end
 
   def item_info
-    puts "This store sells shirts that are #{input_color} and size #{input_size} and #{input_price} dollars."
+    puts "This store sells shirts that are #{@color} and size #{@size} and #{@price} dollars."
   end
 
-  def end_of_season_sale
-end
+  # def end_of_season_sale
+#    @price - 0.05%
+# end
 
 coats = Shirts.new("red", "M", "20")
 p coats
-p coats.input_price
-coats.price = 25
-p coats.input_price
 p coats.item_info
-
-
+p coats.price
+coats.price = 25
+p coats.price
 
