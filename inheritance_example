@@ -47,3 +47,4 @@ p car
 bike = Bike.new
 p bike
 vehicle.turn("Right")
+p vehicle.turn
