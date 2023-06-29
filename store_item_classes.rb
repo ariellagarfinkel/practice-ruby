@@ -1,4 +1,4 @@
-"./module_ClothingAble"
+require "./module_ClothingAble"
 
 class Shirts
   include ClothingAble
