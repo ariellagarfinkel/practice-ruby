@@ -38,10 +38,9 @@ class Manager < Employee
   def give_all_raises
     index = 0
     while index < @employees.length
-      employee.give_annual_raise 
+      @employee.give_annual_raise
       index = index + 1
     end
-    
   end
 
   # def fire_all_employees

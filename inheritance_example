@@ -1,13 +1,10 @@
-class Vehicle
-  attr_reader :speed, :direction
-  attr_writer :speed, :direction
-
+module MoveAble
   def initialize
     @speed = 0
     @direction = "north"
   end
 
-  def brake
+  def break
     @speed = 0
   end
 
@@ -20,7 +17,10 @@ class Vehicle
   end
 end
 
-class Car < Vehicle
+class Car
+  include BreakAble
+  include TurnAble
+
   def initialize
     super
   end
@@ -30,7 +30,10 @@ class Car < Vehicle
   end
 end
 
-class Bike < Vehicle
+class Bike
+  include BreakAble
+  include TurnAble
+
   def initialize
     super
   end
@@ -40,11 +43,11 @@ class Bike < Vehicle
   end
 end
 
-vehicle = Vehicle.new
-p vehicle
 car = Car.new
 p car
+p car.honk_horn
 bike = Bike.new
 p bike
-vehicle.turn("Right")
-p vehicle.turn
+p bike.ring_bell
+# vehicle.turn("Right")
+# p vehicle.turn("Right")
