@@ -18,25 +18,25 @@ class Vehicle
   def turn(new_direction)
     @direction = new_direction
   end
+end
 
-  class Car < Vehicle
-    def initialize
-      super
-    end
-
-    def honk_horn
-      puts "Beeeeeeep!"
-    end
+class Car < Vehicle
+  def initialize
+    super
   end
 
-  class Bike < Vehicle
-    def initialize
-      super
-    end
+  def honk_horn
+    puts "Beeeeeeep!"
+  end
+end
 
-    def ring_bell
-      puts "Ring ring!"
-    end
+class Bike < Vehicle
+  def initialize
+    super
+  end
+
+  def ring_bell
+    puts "Ring ring!"
   end
 end
 
@@ -46,3 +46,4 @@ car = Car.new
 p car
 bike = Bike.new
 p bike
+vehicle.turn("Right")
